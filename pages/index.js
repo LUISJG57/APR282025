@@ -46,26 +46,26 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col justify-center items-center p-4">
+    <div>
       <Head>
         <title>NovaLearn - Iniciar Sesión</title>
       </Head>
       
-      <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
-        <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-blue-600">NovaLearn</h1>
-          <p className="text-gray-600 mt-2">Biblioteca Virtual Exclusiva</p>
+      <div>
+        <div>
+          <h1>NovaLearn</h1>
+          <p>Biblioteca Virtual Exclusiva</p>
         </div>
 
         {error && (
-          <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
+          <div>
             {error}
           </div>
         )}
 
         <form onSubmit={handleSubmit}>
-          <div className="mb-4">
-            <label htmlFor="username" className="block text-gray-700 text-sm font-bold mb-2">
+          <div>
+            <label htmlFor="username">
               Nombre de usuario
             </label>
             <input
@@ -73,14 +73,13 @@ export default function Login() {
               id="username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Ingrese su nombre de usuario"
               required
             />
           </div>
 
-          <div className="mb-6">
-            <label htmlFor="password" className="block text-gray-700 text-sm font-bold mb-2">
+          <div>
+            <label htmlFor="password">
               Contraseña
             </label>
             <input
@@ -88,7 +87,6 @@ export default function Login() {
               id="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Ingrese su contraseña"
               required
             />
@@ -97,7 +95,6 @@ export default function Login() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
           >
             {loading ? 'Iniciando sesión...' : 'Iniciar Sesión'}
           </button>

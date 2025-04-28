@@ -1,8 +1,3 @@
-/**
- * Simulación de base de datos con usuarios registrados
- * En un entorno real, esto sería reemplazado por una base de datos real
- */
-
 export const students = [
     {
       username: 'ana.t',
